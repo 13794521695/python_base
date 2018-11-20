@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #box{
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+        .box{
+            font-size: 18px;
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <script>
+        /*
+        每个函数默认返回 return undefined
+         */
+        var oBox = document.getElementById("box");
+        function fn() {
+            oBox.innerHTML = "hahahah";//过程
+            // return "xiaopo";//结果
+            return oBox;
+        }
+        /*var x = fn();
+        alert(x);*/
+        fn();
+        // fn().className = "box";
+        oBox.className = "box";
+    </script>
+</body>
+</html>

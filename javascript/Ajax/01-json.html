@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <script src="https://cdn.bootcss.com/jquery/3.2.0/jquery.js"></script>
+    <script>
+        /*
+           JSON:轻量级的数据交互格式，它实际在传输的时候都是字符串
+           ****JSON:一种交互的格式，所有的语言基本上都有字符串，可以传递
+           js对象:是一种js数据类型，是js特有的，无法传递交互数据
+
+           JSON语法规则：
+            1.json数据格式的属性（键和字符串）的值都为双引号
+            2.值:整数、浮点数（小数）、字符串、布尔、数组、对象（除了undefined/NaN）
+
+            JSON用js定义：
+            通过字符串来定义
+                   var obj = '{"name": "xiaopo"}';
+            通过js对象来定义，最后传输的时候将对象转换为字符串
+                   var obj = {"name": "xiaopo"};
+                   JSON.stringify(obj)
+        */
+        /*var obj1 = '{"name": "xiaopo","sex": "woman","age": "18"}';
+        console.log(obj1);
+        console.log(typeof obj1);*/
+
+        /*var obj1 = {"name": "xiaopo","sex": "woman","age": "18"};
+        console.log(obj1);
+        console.log(typeof obj1);
+        var obj2 = JSON.stringify(obj1);
+        console.log(obj2);
+        console.log(typeof obj2);*/
+
+        /*JSON字符串解析js对象*/
+        var obj1 = '{"name": "xiaopo","sex": "woman","age": "18"}';
+        console.log(obj1);
+        console.log(typeof obj1);
+        var obj2 = JSON.parse(obj1);
+        console.log(obj2);
+        console.log(typeof obj2);
+    </script>
+</body>
+</html>

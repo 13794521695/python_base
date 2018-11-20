@@ -1,0 +1,134 @@
+一：五种数据类型：
+    1：string  字符串
+    2：list  列表
+    3：hash  哈希
+    4：set 集合
+    5：sorted sets 有序集合
+
+二：操作
+    1：操作 string
+        set name  which
+        不能用同一个key 不然就会覆盖 默认设置的过期时间是永久
+
+        获取
+        get  name
+
+        设置过期时间： expire name 20  (这是key存在的情况下)
+         set name which ex  10  (这是key不存在的情况)
+         ttl  name  （可以查看还剩多少时间过期）
+         append  name love  (追加，会接在which的后面，拼成一个新的字符串)
+         mset username which password 123    （设置多个key和value）
+         mget username  password  (得到多个value)
+         del  name    (删除key)
+         keys *  （查看所有的key）
+         exists  username   （查看key是是否存在）
+         type  username  （查看key的类型）
+
+
+
+    2: 操作list
+        lpush 左添加
+        lpush key value
+
+        rpush 右添加
+        rpush key value
+
+        查看
+        lrange key start stop
+        例 查看所有
+        lrange key 0 -1
+
+        获得list的元素个数
+        llen key
+
+        查看位于index位置上的元素
+        lindex key  index
+
+        删除
+        lpop 删除左边第一个
+        lpop key
+        rpop 删除右边第一个
+        rpop key
+        lrem 删除指定
+        lrem key count value
+        count > 0 从左往右 删除数量为count的value
+        count = 0 删除所有的 value
+        count < 0 从右往左 删除数量为count的value
+
+    3:操作hash
+        hset user username  which   (设置哈希表user)
+        hget user username    (得到哈希表user  username的value值)
+        hdel user username    （删除哈希表的键键）
+        hmset  user username which  passwd 123   (连续设置多个)
+        hmget  username passwd    (联系获得多个)
+        hgetall user   (获取整个哈希表)
+        hkeys user   (获取所有key)
+        hvals  user   (获取所有values)
+        heln user   (获取个数)
+
+
+    4：操作集合set
+        sadd   ywy   which  fsdgfdg   (为集合ywy添加两个元素)
+        smembers ywy   (获取元素)
+        srem  ywy  reret   (指定删除reret)
+        spop  ywy   (随机删除元素)
+        移动一个集合的值到另一个集合
+        smove oldkey newkey member
+        判断集合存在某个值
+        sismember key value
+
+
+
+    5：有序集合 zset
+        zadd   test  1 f  4 g  7 d   9 d   (安装序号创建集合)
+        zrange test 0 -1   (查看集合所有元素)
+        zrevrange  test 0  -1   (倒序查看)
+        zrem  test  f   (删除f)
+        zrank  test g   (获取g的索引)
+        zrevrank  test  g  （反序取索引）
+        zcard test  (查看元素个数)
+
+        查看score值， zscore  test g     会返回4  即zadd创建的时候得序号
+
+
+
+
+三：redis发布和订阅：
+发布
+publish 频道 消息             127.0.0.1:6379> publish  ywy   12345678  发布ywy频道
+
+订阅
+subscribe 频道                127.0.0.1:6379> subscribe   ywy       先订阅频道，然后再发布频道，  发布的信息都可以同步
+
+
+取消订阅
+unsubcribe 频道
+
+
+设置密码： 配置文件，修改后重启
+requirepass   密码
+
+可以在127.0.0.1:6379> auth  密码   登录
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

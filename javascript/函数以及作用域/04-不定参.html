@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        sum(1,2,3,4,5,6,7,8,9);
+        function sum() {
+            //不定参 arguments,存储着所有 实参 的集合
+            // 无论有没有形参，实参都会被存在 不定参 里面
+            // alert(arguments.length);
+            // alert(arguments[8]);
+            var x = 0;
+            for(var i = 0 ,len = arguments.length; i < len; i ++){
+                x += arguments[i];
+            }
+            alert(x);
+        }
+    </script>
+</body>
+</html>

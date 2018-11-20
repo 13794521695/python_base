@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="PYTHON_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$" />
+    <content url="file://F:/network-python" />
+    <content url="file://F:/tornado_fk">
+      <sourceFolder url="file://F:/tornado_fk/templates" isTestSource="false" />
+    </content>
+    <content url="file://F:/tornado_fk1">
+      <sourceFolder url="file://F:/tornado_fk1" isTestSource="false" />
+    </content>
+    <content url="file://F:/tornado_pj" />
+    <orderEntry type="jdk" jdkName="Remote Python 2.7.15rc1 (sftp://ywy@192.168.237.131:22/usr/bin/python2.7)" jdkType="Python SDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+  <component name="TestRunnerService">
+    <option name="PROJECT_TEST_RUNNER" value="Unittests" />
+  </component>
+</module>

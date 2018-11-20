@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="box" title="hah"> 我是一个div标签 </div>
+    <!--<p>1</p>-->
+    <!--<p>2</p>-->
+    <!--<p>3</p>-->
+    <!--<p>4</p>-->
+    <!--<div class="box">div1</div>-->
+    <!--<div class="box">div2</div>-->
+
+    <div id="box1">
+        <i class="box1">iiii1</i>
+        <p class="pp">
+            <i class="box1">iiii2</i>
+        </p>
+    </div>
+    <script>
+        /*
+       那么JS如何操作页面：
+           其实，要操作页面，就是操作标签，JS要操作标签，就要先获取标签
+       js如何获取独有标签
+           document.title
+           document.head
+           document.body
+
+       其他标签的获取，id前面必须是document,其他的前面可以是某个元素(id,document)，但不能是集合
+               通过id获取元素，
+                   document.getElementById()
+               通过className获取元素(不支持IE8及以下)
+                   .getElementsByClassName()
+               通过标签名获取元素
+                   .getElementsByTagName()
+
+               通过选择器的写法获取元素（不兼容IE7及以下）
+                   .querySelector()
+                   .querySelectorAll()
+               通过name值获取
+                    document.getElementsByName（）
+        */
+        document.title = "我是来改变标题的";
+        //修改别的标签的内容，得用innerHTML(会解析标签)，innerText（不会解析标签）
+        // document.body.innerHTML += "<b><em>我是谁</em></b>";
+        // document.body.innerText += "<b><em>我是谁</em></b>";
+
+        //获取的是确切的某个元素，可以直接操作这个元素
+        // document.getElementById("box").innerHTML += "我是通过id改变的";
+
+        //获取的是一堆元素的集合，设置操作的时候要通过下标（索引、序号）拿到对应的某一个
+        /*var oP = document.getElementsByTagName("p");
+        alert(oP.length);
+        oP[0].innerHTML = "我是第一个p标签";*/
+
+        /*var oBox = document.getElementsByClassName("box");
+        // alert(oBox.length);
+        oBox[0].innerHTML = "我是第一个";
+        oBox[1].innerHTML = "我是第二个";*/
+
+        //获取第一个对应的元素
+        // document.querySelector("#box1 .pp .box1").innerHTML = "5555";
+        var oI = document.querySelectorAll("#box1 .box1");
+        oI[0].innerHTML = "8888";
+    </script>
+</body>
+</html>

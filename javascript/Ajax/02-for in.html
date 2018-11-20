@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <script src="https://cdn.bootcss.com/jquery/3.2.0/jquery.js"></script>
+    <script>
+        var obj1 = {"name": "xiaopo","sex": "woman","age": "18"};
+        /*console.log(obj1);
+        console.log(obj1.name);
+        console.log(obj1.length);//undef ined*/
+
+        for(var key in obj1){
+            console.log(key,obj1[key]);
+        }//key是{}里的属性名称，obj[key] {}里面属性的值
+    </script>
+</body>
+</html>

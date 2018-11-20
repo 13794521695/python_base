@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // for(var i = 0 ; i < 5; i ++){
+        //     console.log(i);
+        // }
+        /*
+         for(1;2;4){
+            3
+         }
+      1-->2-->3-->4-->2-->3-->4-->2-->3-->4-->...直到2bu不满足
+         */
+
+        /*for(var i = 1 ; i < 5 ; i ++){
+            for(var j = 1; j < 4; j ++){
+                console.log(i + ";"+ j);//i;j
+            }
+        }*/
+
+        for(var i = 1 ;i < 10 ; i ++){
+            if(i == 5){
+                //break;//中断循环，终止循环，结束循环，未执行的代码不执行
+                continue;//跳出本次循环
+            }
+            console.log(i);
+        }
+    </script>
+
+</body>
+</html>

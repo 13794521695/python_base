@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div>我是div</div>
+    <script>
+        /*
+        document.write()
+            在文档流关闭之前，给body部分新增内容
+            在文档流关闭之后，修改整个html的内容
+         */
+        // document.write('新增部分')
+        document.write("我是新增的");
+        window.onload = function () {
+            document.write("修改整个html");
+        }
+    </script>
+</body>
+</html>

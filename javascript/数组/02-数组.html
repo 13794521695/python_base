@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        /*
+           数组 主要存放数据的
+              arr.length
+                  查看数组的个数
+              arr[]
+                  可以读可写
+              arr.push
+                   在后面添加 能同时添加多个值
+              arr.unshift()
+                  在前面添加  能同时添加多个值
+              arr.pop()
+                  删除数组的最后一个
+              arr.shift()
+                  删除数组的第一个
+              arr.splice()  ******
+                    (3)  数组的长度
+                  (0, 1) 从第0位开始删除第一个 返回删除的那个
+                  (2, 3, 'a') 从第二位开始后面三位全部替换成 a
+                  (2, 0, 'a') 第二位开始前面插入 a
+              arr.sort()
+                  顺序来排序
+              arr.reverse()
+                  倒序排序
+              arr.join()
+                  arr.join('a')  以`a`为界限拼接字符串
+       */
+
+        /*var arr = ["jianeng","which","xiaopo"];
+        alert(arr.length);
+        alert(arr[2]);
+        arr[0] = "linshuang";
+        console.log(arr);//可以写
+        console.log(arr.join("~python~"))*/
+
+        //以创建对象的形式 创建数组
+       /* var arr = new Array();
+        // var arr =[];
+        arr[0] = "jianeng";
+        arr[1] = "which";
+        arr[2] = "xiaopo";
+        console.log(arr);*/
+
+         // var arr = ["风","雨","雷","电"];
+         // console.log(arr);
+       // arr.push("雪","冰");//往数组后面 追加
+       //  arr.unshift("雪","冰");//往数组前面 追加
+       //  arr.pop();//删除数组最后一位
+       //  arr.shift();//删除数组的 第0位
+       //  arr.splice(3);//数组的长度为3    ****
+       //  arr.splice(1,2);//从下标1开始 删除2位  ****
+       //  arr.splice(0,1,"哈");//从下标0开始 删除2位 添加元素  ***
+       //  console.log(arr);
+
+        /*var arr = [[1,2,3],5,6];
+        // alert(arr.length);
+        console.log(arr[0]);
+        console.log(arr[0][1]);*/
+
+        /*var arr = [1,9,8,7];
+        arr.sort();//从小到大
+        arr.sort().reverse();//从大到小
+        console.log(arr);*/
+
+        var arr = [-8,15,2,3,1];
+        arr.sort(function ( a,b) {
+           // return a - b;//从小到大
+           //  return b - a;//从大到小
+           //  return 1;//倒序
+            return 0;
+        });
+        console.log(arr);
+    </script>
+</body>
+</html>

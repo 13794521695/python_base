@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="Always" serverName="test">
+    <serverData>
+      <paths name="test">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/ywy/my-project" local="$PROJECT_DIR$" />
+            <mapping deploy="/home/ywy/tornado_fk" local="F:/tornado_fk" />
+            <mapping deploy="/home/ywy/tornado_fk1" local="F:/tornado_fk1" />
+            <mapping deploy="/home/ywy/network-python" local="F:/network-python" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="test2">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/ywy/tornado_pj" local="F:/tornado_pj" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
+  </component>
+</project>

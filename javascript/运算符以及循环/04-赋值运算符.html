@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        /*
+         赋值运算符
+            += -= *= /= %=
+            ++ -- 两个都存在隐式类型转换，会全部转换为数字
+            ++x x++
+         */
+        // var x = 8;
+        // x += 2; //x = x + 2 = 8 + 2 =10
+        // x -= 3;
+        // x *= 2;
+        // var a = 3;
+        // a += "55";
+        // a = a + "55";// 355
+        // alert(typeof a);//string
+        // x /= 2;
+        // x %= 3;
+        // alert(x);
+
+
+        var y = "5";
+        // y ++;
+        // ++ y;
+        // var z = y ++; // z = y   y ++
+        var z = ++ y;// y = y + 1   z = y
+        alert(y);
+        alert(z);
+    </script>
+</body>
+</html>

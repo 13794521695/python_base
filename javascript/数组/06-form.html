@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        textarea{
+            width: 200px;
+            height: 100px;
+            resize: none;
+            /*resize: vertical;*/
+            /*resize: horizontal;*/
+        }
+    </style>
+</head>
+<body>
+    <form action="http://www.baidu.com" method="post" autocomplete="off">
+        <!--action 规定当前提交表单向何处发送表单数据-->
+        <!--method  默认get-->
+        <!--autocomplete自动完成，on输入框会提示  off输入框不会提示-->
+        帐号：<input type="text" name="user" value="hah"><br/>
+        密码：<input type="password" name="psd" placeholder="请输入你的密码" required><br/>
+        单选框：
+        <input type="radio" name="gender" value="nan">男
+        <input type="radio" name="gender" value="nv">女
+        <input type="radio" name="gender" disabled>保密<br/>
+        多选框：
+        <input type="checkbox" id="sing" name="hobby">
+        <label for="sing" name="hobby">唱歌</label>
+        <input type="checkbox" name="hobby" checked>跳舞
+        <input type="checkbox" name="hobby">看书
+        <input type="checkbox" name="hobby" disabled>逛街<br/>
+        下拉框：
+        <select name="aa" id="aa" size="2">
+            <!--size规定下拉列表中可见选项的数目-->
+            <!--selected 规定在select里面默认展示第几项-->
+            <option value="1">长沙</option>
+            <option value="2">北京</option>
+            <option value="3" selected>成都</option>
+            <option value="4">上海</option>
+        </select><br/>
+        文本框：
+        <textarea name="qq" id="qq">
+
+        </textarea><br/>
+        <input type="submit" value="tijiao">
+        <input type="reset">
+        <input type="button" value="注册"><!--给js操作-->
+    </form>
+</body>
+</html>

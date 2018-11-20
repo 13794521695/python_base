@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="/static/js/jquery.js"></script>
+    <title>发送AJAX</title>
+</head>
+<body>
+    <button>发送Ajax数据</button>
+    <script>
+        $('button').click(function(event) {
+            event.preventDefault();
+            $.ajax({
+                'url': '/htbin/accept-form.py',
+                'method': 'POST',
+                'data': {
+                    'xxx': '1', 
+                    'ooo': '2'
+                }
+            }).done(function(resp) {
+                console.log(resp)
+            }).fail(function(error) {
+                console.log(error)
+            })
+        });
+    </script>
+</body>
+</html>

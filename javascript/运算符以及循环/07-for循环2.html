@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+            width: 50px;
+            height: 50px;
+            background: red;
+            border: 1px solid white;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <script>
+        var oLi = document.getElementsByTagName("li");
+        // alert(oLi.length);
+        /*oLi[0].onclick = function () {
+            alert(0);
+        };
+        oLi[1].onclick = function () {
+            alert(1);
+        };
+        oLi[2].onclick = function () {
+            alert(2);
+        };
+        oLi[3].onclick = function () {
+            alert(3);
+        };*/
+
+        for(var i = 0; i < 4; i ++){
+            console.log(i);
+            oLi[i].aa = i;//index 自定义变量 aa bb yy
+            /*
+            oLi[0].aa = 0;
+            oLi[1].aa = 1;
+            */
+            oLi[i].onclick = function () {
+                alert(this.aa);
+                // alert(i);//循环结束的i
+            };
+        }
+    </script>
+</body>
+</html>
